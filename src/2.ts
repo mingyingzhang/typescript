@@ -61,4 +61,8 @@ interface Person {
 type FilterByValueType<Obj extends Record<string,any>,ValueType> = {
     [Key in keyof Obj as Obj[Key] extends ValueType ? Key : never] : Obj[Key];
 }
-type FilterRes = FilterByValueType<Person, string| number>
+type FilterRes = FilterByValueType<Person, string| number>;
+
+export {
+    CamelCase
+}
